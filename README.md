@@ -148,40 +148,6 @@ To quickly evaluate code use `DEBUG CONSOLE`.
 
 ## Other
 
-### Chrome
-
-- use English version!
-- open DevTools <kbd>F12</kbd> or right click `Inspect`
-- get selector: right click on element -> Copy -> Copy selector
-- testing CSS selectors in Console: `$$('selector')`
-
-### Prettier
-
-- install Prettier  
-  `npm install --save-dev --save-exact prettier`
-- configure Prettier
-
-  - exlude files in `.prettierignore`
-
-    ```
-    package-lock.json
-    playwright-report
-    test-results
-
-    ```
-
-  - set rules in `.prettierrc.json`
-    ```
-    {
-        "singleQuote": true,
-        "endOfLine": "auto"
-    }
-    ```
-
-- run Prettier  
-  `npx prettier --write .`
-- additionaly you can install VSC extension: **Prettier**
-  - and set default VSC formatter as Prettier (right mouse button and `Format document with ...`)
 
 ### package.json example scripts
 
