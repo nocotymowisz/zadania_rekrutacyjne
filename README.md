@@ -31,8 +31,6 @@ https://www.saucedemo.com
   `npx playwright show-report`
 - run Trace Viewer on zip file  
   `npx playwright show-trace trace.zip`
-- run tests form exact file  
-  `npx playwright test tests/login.spec.ts`
 
 ### Updating Playwright
 
@@ -109,7 +107,7 @@ To quickly evaluate code use `DEBUG CONSOLE`.
       video: {'retain-on-failure'},
   },
   ```
-- enable Trace Viewer on fial
+- enable Trace Viewer on fail
   ```javascript
   use: {
       trace: {'retain-on-failure'},
