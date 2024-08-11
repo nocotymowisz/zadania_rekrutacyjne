@@ -10,7 +10,9 @@ test.describe('Orders', () => {
     const firstName = 'Test';
     const lastName = 'Testowy';
     const postCode = '12-123';
-
+    
+    const expectedOrderCompeleteText = 'Thank you for your order!';
+    
     // Act
     await page.goto(url);
     await page.locator('#user-name').fill(userName);
@@ -26,7 +28,7 @@ test.describe('Orders', () => {
     await page.locator('#finish').click();
 
     // Assert
-    await expect(page.locator('[data-test="complete-header"]')).toHaveText('Thank you for your order!');
+    await expect(page.locator('[data-test="complete-header"]')).toHaveText(expectedOrderCompeleteText);
   });
 
 });
