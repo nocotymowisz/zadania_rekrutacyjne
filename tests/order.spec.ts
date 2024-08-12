@@ -1,15 +1,18 @@
 import { test, expect } from '@playwright/test';
 import { loginData } from '../test-data/login.data';
+import { LoginPage } from '../pages/login.page';
 
 test.describe('Orders tests', () => {
   test.beforeEach(async ({ page }) => {
     const userName = loginData.userName;
     const userPassword = loginData.userPassword;
+    const loginPage = new LoginPage(page);
 
     await page.goto('/');
-    await page.locator('#user-name').fill(userName);
-    await page.locator('#password').fill(userPassword);
-    await page.locator('#login-button').click();
+    await loginPage.userNameInput.fill(userName);
+    await loginPage.passwordInput.fill(userPassword);
+    await loginPage.loginButton.click();
+
   });
 
   test('succesful order complete', async ({ page }) => {
