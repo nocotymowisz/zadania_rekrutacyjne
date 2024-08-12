@@ -156,7 +156,7 @@ To quickly evaluate code use `DEBUG CONSOLE`.
 - command with parameters:  
   `"test:headed": "npx playwright test --headed",`
 - other script with added parameters:  
-  `"test:pulpit:hd" : "npm run test tests/pulpit.spec.ts -- --headed"`
+  `"test:pulpit:hd" : "npm run test tests/order.spec.ts -- --headed"`
 
 Scripts can be run in standard and debug mode by:
 
