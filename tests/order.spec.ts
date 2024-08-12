@@ -4,7 +4,7 @@ import { loginData } from '../test-data/login.data';
 test.describe('Orders tests', () => {
   test.beforeEach(async ({ page }) => {
     const userName = loginData.userName;
-    const userPassword = loginData.password;
+    const userPassword = loginData.userPassword;
 
     await page.goto('/');
     await page.locator('#user-name').fill(userName);
